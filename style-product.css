@@ -1,0 +1,41 @@
+.admin-link {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.admin-button {
+    padding: 10px 20px;
+    background-color: #2b3a42;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.admin-button:hover {
+    background-color: #1abc9c;
+    transform: translateY(-2px);
+}
+
+
+    
+    .home-link {
+        margin-bottom: 20px;
+    }
+    
+    .home-button {
+        display: inline-block;
+        padding: 8px 16px;
+        background-color: #2b3a42;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .home-button:hover {
+        background-color: #1abc9c;
+    }

@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý sản phẩm</title>
+    <link rel="stylesheet" href="style-product.css">
+    <style>
+        .admin-panel {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .product-form {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .product-form input, 
+        .product-form textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .product-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .product-table th, 
+        .product-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .btn-add {
+            background: #4CAF50;
+            color: white;
+        }
+        .btn-edit {
+            background: #2196F3;
+            color: white;
+        }
+        .btn-delete {
+            background: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-panel">
+        <h2>Quản lý sản phẩm</h2>
+        <!-- Thêm vào đầu phần admin-panel -->
+        <div class="home-link">
+        <a href="index.html" class="home-button">← Trở về trang chủ</a>
+        </div>
+        
+        <div class="product-form">
+            <h3>Thêm/Sửa sản phẩm</h3>
+            <form id="productForm">
+                <input type="hidden" id="productId">
+                <input type="text" id="productName" placeholder="Tên sản phẩm" required>
+                <input type="text" id="productImage" placeholder="URL hình ảnh" required>
+                <input type="number" id="productPrice" placeholder="Giá" required>
+                <input type="number" id="productOriginalPrice" placeholder="Giá gốc" required>
+                <textarea id="productSpecs" placeholder="Thông số kỹ thuật" rows="4" required></textarea>
+                <button type="submit" class="btn btn-add">Lưu sản phẩm</button>
+            </form>
+        </div>
+
+        <table class="product-table">
+            <thead>
+                <tr>
+                    <th>Hình ảnh</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Giá</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody id="productList"></tbody>
+        </table>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
